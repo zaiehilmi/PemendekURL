@@ -1,17 +1,26 @@
 {
-  "name": "bukkku",
+  "name": "pemendekurl",
   "version": "1.0.0",
-  "description": "",
-  "main": "app.js",
+  "scripts": {
+    "start": "func start",
+    "test": "echo \"No tests yet...\""
+  },
   "dependencies": {
     "body-parser": "^1.14.1",
     "express": "^4.13.3",
     "mongoose": "^4.2.9"
   },
   "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zaiehilmi/PemendekURL.git"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zaiehilmi/PemendekURL/issues"
+  },
+  "homepage": "https://github.com/zaiehilmi/PemendekURL#readme",
+  "description": ""
 }

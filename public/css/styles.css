@@ -5,7 +5,9 @@
   html,
   body {
     height: 100%;
-    background-color: #4791D2;
+    background-color: #0093E9;
+    background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+
   }
   
   body {
@@ -14,7 +16,7 @@
     font-family: 'Raleway', sans-serif;
   }
   
-  .btn-shorten {
+  /* .btn-shorten {
     color: #ffffff;
     background-color: #F89406;
     border: none;
@@ -27,7 +29,7 @@
     color: #ffffff;
     background-color: #FA8900;
     border: none;
-  }
+  } */
   
   .site-wrapper {
     display: table;
@@ -69,7 +71,7 @@
   }
   
   #link a{
-    color: #F89406;
+    color: #3206f8;
     font-size: 1.5em;
     margin-right: 20px;
   }
@@ -85,3 +87,27 @@
       width: 700px;
     }
   }
+
+  
+  .btn-shorten {background-image: linear-gradient(to right, #FF8008 0%, #FFC837  51%, #FF8008  100%)}
+  .btn-shorten {
+     /* margin: 10px; */
+     /* padding: 15px 45px; */
+     text-align: center;
+     text-transform: uppercase;
+     transition: 0.5s;
+     background-size: 200% auto;
+     color: white;            
+     box-shadow: 0 0 20px #eee;
+     border-radius: 10px;
+     display: block;
+   }
+
+   .btn-shorten:hover,
+   .btn-shorten:active,
+   .btn-shorten.active {
+     background-position: right center; /* change the direction of the change here */
+     color: #fff;
+     text-decoration: none;
+   }
+  
