@@ -1,16 +1,16 @@
 var express = require('express');
-var app = express();
-var path = require('path');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
+var path = require('path');
 var config = require('./config');
 var base58 = require('./base58.js');
+var app = express();
 
 // grab the url model
 var Url = require('./models/url');
 
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json()); //parse middleware's json
+app.use(bodyParser.urlencoded({ extended: true })); //parse middleware's urlencoded
 
 app.use(express.static(path.join(__dirname, 'public')));
 
