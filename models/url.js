@@ -3,7 +3,7 @@ var connection = require('./connection');
 var Schema = mongoose.Schema;
 
 connection.once('open',function() {
-  console.log("Connected at http://localhost:3000/....");
+  console.log("Connected at http://52.230.116.121:3000/....");
 });
 
 var CounterSchema = Schema({
