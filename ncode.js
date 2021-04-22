@@ -1,4 +1,4 @@
-var alphabet = "123456789abcdefghijkmnopqrstuvwxyzABCDEFGHJKLMNPQRSTUVWXYZ";
+var alphabet = "1xMDbs8XcEFdt5eqGjfYu4gQIhJv5UijKw6klZx7mVnNyR8PLpWz9MqSBrA";
 var base = alphabet.length;
 
 function encode(num){

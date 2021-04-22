@@ -3,7 +3,7 @@ var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var path = require('path');
 var config = require('./config');
-var base58 = require('./base58.js');
+var ncode = require('./ncode.js');
 var app = express();
 
 // grab the url model
@@ -25,7 +25,7 @@ app.post('/api/shorten', function(req, res){
   // check if url already exists in database
   Url.findOne({long_url: longUrl}, function (err, doc){
     if (doc){
-      shortUrl = config.webhost + base58.encode(doc._id);
+      shortUrl = config.webhost + ncode.encode(doc._id);
 
       // the document exists, so we return it without creating a new entry
       res.send({'shortUrl': shortUrl});
@@ -41,7 +41,7 @@ app.post('/api/shorten', function(req, res){
           console.log(err);
         }
 
-        shortUrl = config.webhost + base58.encode(newUrl._id);
+        shortUrl = config.webhost + ncode.encode(newUrl._id);
 
         res.send({'shortUrl': shortUrl});
       });
@@ -53,9 +53,9 @@ app.post('/api/shorten', function(req, res){
 
 app.get('/:encoded_id', function(req, res){
 
-  var base58Id = req.params.encoded_id;
+  var ncodeId = req.params.encoded_id;
 
-  var id = base58.decode(base58Id);
+  var id = ncode.decode(ncodeId);
 
   // check if url already exists in database
   Url.findOne({_id: id}, function (err, doc){
