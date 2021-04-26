@@ -22,12 +22,12 @@ app.post('/api/shorten', function(req, res){
   var longUrl = req.body.url;
   var shortUrl = '';
 
-  // check if url already exists in database
+  // check if there is any existing url in db
   Url.findOne({long_url: longUrl}, function (err, doc){
-    if (doc){
+    if (doc){ 
+      //if url exist then return it without creating new entry
       shortUrl = config.webhost + ncode.encode(doc._id);
 
-      // the document exists, so we return it without creating a new entry
       res.send({'shortUrl': shortUrl});
     } else {
       // since it doesn't exist, let's go ahead and create it:
